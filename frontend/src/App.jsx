@@ -5,7 +5,7 @@ import {Route ,Routes} from 'react-router-dom'
 import Home from './components/Home'
 import About from './components/About'
 import Gallery from './components/Gallery'
-import Events from './components/Events'
+import Events from './components/Events/Events.jsx'
 import './App.css'
 
 function App() {
