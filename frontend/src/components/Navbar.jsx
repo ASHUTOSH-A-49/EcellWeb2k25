@@ -1,41 +1,60 @@
-import React from 'react'
-import './Navbar.css'
 
-const Navbar = () => {
-    function showSidebar() {
-        const sidebar = document.querySelector(".sidebar")
-        sidebar.style.display = "flex"
-    }
-    function hidesidebar() {
-        const sidebar = document.querySelector(".sidebar")
-        sidebar.style.display = "none"
-    }
-    return (
-        <div>
-            <nav >
-                <ul className="sidebar">
-                    <li onClick={e=>{hidesidebar()}}><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="black"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" /></svg></a></li>
-                    <li><a href="#">logo</a></li>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Gallery</a></li>
-                    <li><a href="#">Events</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Sponsors</a></li>
-                </ul>
-            </nav>
-            <nav>
-                <ul>
-                    <li className="onMobile"><a href="#">logo</a></li>
-                    <li className="onMobile"><a href="#">Home</a></li>
-                    <li className="onMobile"><a href="#">Gallery</a></li>
-                    <li className="onMobile"><a href="#">Events</a></li>
-                    <li className="onMobile"><a href="#">About</a></li>
-                    <li className="onMobile"><a href="#">Sponsors</a></li>
-                    <li className="menu-btn" onClick={ e=>{showSidebar()}}><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="black"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" /></svg></a></li>
-                </ul>
-            </nav >
-        </div >
-    )
+
+import { useState } from "react";
+import Logo from "./Logo";
+import { Link } from "react-router-dom";
+
+export default function Navbar() {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <nav className="fixed top-0 left-0 w-full bg-white/80 backdrop-blur-md shadow-sm z-50">
+      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        
+        {/* Logo */}
+        <div className="flex gap-4"> 
+            <span><Logo /></span>
+            <h1 className="text-2xl font-bold tracking-wide cursor-pointer text-center flex-col">
+                <div>
+                  E-Cell
+                </div>
+                <div className="text-sm">
+                  NITRR
+                </div>
+            </h1>
+        </div>
+
+        {/* Desktop Menu */}
+        
+        <ul className="hidden md:flex items-center gap-8 text-gray-700 font-medium">
+          <li className="hover:text-blue-600 transition"><Link to="/">Home</Link></li>
+          <li className="hover:text-blue-600 transition"><Link to="/events">Events</Link></li>
+          <li className="hover:text-blue-600 transition"><Link to="/">Team</Link></li>
+          <li className="hover:text-blue-600 transition"><Link to="/about">About</Link></li>
+          <li className="hover:text-blue-600 transition"><Link to="/sponsors">Sponsors</Link></li>
+        </ul>
+
+        {/* Mobile Hamburger */}
+        <button
+          className="md:hidden flex flex-col gap-1.5 z-[99]"
+          onClick={() => setOpen(!open)}
+        >
+          <span className="w-6 h-0.5 bg-black"></span>
+          <span className="w-6 h-0.5 bg-black"></span>
+          <span className="w-6 h-0.5 bg-black"></span>
+        </button>
+      </div>
+
+      {/* Mobile Menu */}
+      {open && (
+        <ul className="md:hidden bg-white shadow-md px-6 py-4 flex flex-col gap-4 text-gray-700 font-medium">
+          <li className="hover:text-blue-600 transition"><Link to="/">Home</Link></li>
+          <li className="hover:text-blue-600 transition"><Link to="/events">Events</Link></li>
+          <li className="hover:text-blue-600 transition"><Link to="/">Team</Link></li>
+          <li className="hover:text-blue-600 transition"><Link to="/about">About</Link></li>
+          <li className="hover:text-blue-600 transition"><Link to="/sponsors">Sponsors</Link></li>
+        </ul>
+      )}
+    </nav>
+  );
 }
-
-export default Navbar
