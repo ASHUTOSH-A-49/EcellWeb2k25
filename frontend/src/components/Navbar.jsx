@@ -29,6 +29,7 @@ export default function Navbar() {
         <ul className="hidden md:flex items-center gap-8 text-gray-700 font-medium">
           <li className="hover:text-blue-600 transition"><Link to="/">Home</Link></li>
           <li className="hover:text-blue-600 transition"><Link to="/events">Events</Link></li>
+          <li className="hover:text-blue-600 transition"><Link to="/gallery">Gallery</Link></li>
           <li className="hover:text-blue-600 transition"><Link to="/">Team</Link></li>
           <li className="hover:text-blue-600 transition"><Link to="/about">About</Link></li>
           <li className="hover:text-blue-600 transition"><Link to="/sponsors">Sponsors</Link></li>
