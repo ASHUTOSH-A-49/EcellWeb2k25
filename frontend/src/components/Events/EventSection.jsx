@@ -14,11 +14,12 @@ const EventSection = ({ title, events, openModal }) => (
             <span className="block h-1 w-20 bg-blue-600 mx-auto mt-2 rounded-full"></span>
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {events.map(event => (
+            {events.map((event,index) => (
                 <EventCard 
                     key={event.id} 
                     event={event} 
                     onClick={openModal} 
+                    index={index}
                 />
             ))}
         </div>
