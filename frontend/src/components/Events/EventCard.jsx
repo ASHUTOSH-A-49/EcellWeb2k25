@@ -51,6 +51,8 @@ const EventCard = ({ event, onClick, index }) => {
                 transition: { duration: 0.3 }
             }}
         >
+            {/* Top glowing line */}
+            <div className="h-px bg-linear-to-r from-transparent via-ecell-mine to-transparent" />
             {/* 💡 IMAGE WRAPPER - Important: overflow-hidden is key for parallax */}
             <div className="aspect-w-3 aspect-h-2 overflow-hidden"> 
                 <motion.img // motion.img is used for the animated image
