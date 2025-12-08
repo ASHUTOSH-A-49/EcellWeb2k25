@@ -216,7 +216,6 @@ export default function HomeAbout() {
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ["start center", "center start"], 
-    // FIX: Section now is fully visible when entering the screen
   });
 
   // Fade only when the section is LEAVING
@@ -341,18 +340,21 @@ export default function HomeAbout() {
                   {/* Icon */}
                   <div
                     className="
-                      w-14 h-14 rounded-xl bg-ecell-mine/10 border border-ecell-mine/30
+                      w-14 h-14 rounded-xl 
+                      bg-ecell-vibrant-orange/10 border border-ecell-vibrant-orange/30  /* 🛠️ MODIFIED: Orange BG/Border */
                       flex items-center justify-center shrink-0
-                      group-hover:bg-ecell-mine/20 group-hover:scale-110
+                      group-hover:bg-ecell-vibrant-orange/20 group-hover:scale-110 /* 🛠️ MODIFIED: Orange Hover BG */
                       transition-all duration-300
                     "
                   >
-                    <Icon className="w-7 h-7 text-ecell-mine" />
+                    {/* 🛠️ MODIFIED: Magenta Icon Color */}
+                    <Icon className="w-7 h-7 text-ecell-vibrant-orange" />
                   </div>
 
                   {/* Text */}
                   <div>
-                    <h3 className="font-bold text-xl mb-2 group-hover:text-ecell-mine transition-colors">
+                    {/* 🛠️ MODIFIED: Magenta Hover Title Color */}
+                    <h3 className="font-bold text-xl mb-2 group-hover:text-ecell-vibrant-magenta transition-colors">
                       {feature.title}
                     </h3>
                     <p className="text-gray-300 leading-relaxed">

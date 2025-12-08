@@ -10,7 +10,9 @@
   --color-ecell-primary: #6366f1;   /* Indigo */
   --color-ecell-secondary: #06b6d4; /* Cyan */
   --color-ecell-accent: #22c55e;    /* Green */
-  --color-ecell-mine: #00bdd6;    
+  --color-ecell-mine: #00bdd6; 
+  --color-ecell-vibrant-magenta: #E93A7F; /* Bright Pink/Magenta */
+  --color-ecell-vibrant-orange: #FF9900;  /* Vibrant Orange */   
 
 }
 
