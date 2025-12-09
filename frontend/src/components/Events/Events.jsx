@@ -4,6 +4,8 @@ import About from '../About'
 import EventSection from './EventSection';
 import { useState } from 'react';
 import EventModal from './EventModal'; 
+// 🛠️ MODIFICATION 1: Import AnimatePresence
+import { AnimatePresence } from 'framer-motion';
 
 const mockEvents = [
     {
@@ -76,7 +78,6 @@ const Events = () => {
     const closeModal = () => setSelectedEvent(null);
 
     return (
-        // Added 'relative' to the container for the absolute positioned blobs to work correctly
         <div className="min-h-screen bg-ecell-bg relative overflow-hidden">
             
             {/* 💡 MODIFICATION: Glowing Background Blobs (Copied from Hero) */}
@@ -87,7 +88,6 @@ const Events = () => {
             </div>
 
             {/* <Navbar /> */}
-            {/* Added relative z-10 to ensure content sits above the background blobs */}
             <div className="page-content pt-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
                 <header className="py-10 text-center">
@@ -110,7 +110,11 @@ const Events = () => {
                 </main>
                 
             </div>
-            <EventModal event={selectedEvent} onClose={closeModal} />
+            
+            {/* 🛠️ MODIFICATION 2: Wrap EventModal in AnimatePresence to enable entrance/exit animations */}
+            <AnimatePresence mode="wait">
+                {selectedEvent && <EventModal event={selectedEvent} onClose={closeModal} />}
+            </AnimatePresence>
         </div>
     );
 }
