@@ -1,0 +1,143 @@
+/* ============================= */
+/* Swiper Container */
+/* ============================= */
+
+.flower-swiper-gallery {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  /* margin-top: 20px ; */
+  /* position: relative; (Swiper often sets this implicitly, but it's good practice) */
+}
+
+/* ============================= */
+/* Individual Slides */
+/* ============================= */
+
+.flower-swiper-gallery .swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 400px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  transition: transform 300ms ease-in-out;
+}
+
+/* ============================= */
+/* Active (Center) Slide */
+/* ============================= */
+
+.flower-swiper-gallery .swiper-slide-active {
+  position: relative;
+  transform: scale(1.05);
+  z-index: 10;
+}
+
+/* Glowing border */
+.flower-swiper-gallery .swiper-slide-active::before {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border-radius: 18px;
+  background: linear-gradient(
+    120deg,
+    #8b5cf6,
+    #6366f1,
+    #22d3ee
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+  filter: blur(8px);
+}
+
+/* Glow on hover (only center slide) */
+.flower-swiper-gallery .swiper-slide-active:hover::before {
+  opacity: 1;
+}
+
+/* Lift effect */
+.flower-swiper-gallery .swiper-slide-active:hover {
+  transform: scale(1.08);
+}
+
+/* Image hover polish */
+.flower-swiper-gallery .swiper-slide-active img {
+  transition: filter 0.4s ease;
+}
+
+.flower-swiper-gallery .swiper-slide-active:hover img {
+  filter: brightness(1.1) contrast(1.05);
+}
+
+/* ============================= */
+/* VISUALLY CORRECT NAVIGATION (RESPONSIVE FIX APPLIED) */
+/* ============================= */
+
+.flower-swiper-gallery .swiper-button-next,
+.flower-swiper-gallery .swiper-button-prev {
+  /* Reverting to standard absolute positioning */
+  position: absolute; 
+  
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: all 0.35s ease;
+  z-index: 20;
+
+  /* Vertical Centering: Reverting to the calculated value */
+  top: 226px; 
+  margin-top: 0; /* Removing fixed positioning margin-top */
+  transform: none; /* Removing fixed positioning transform */
+  /* display: none; */
+}
+
+/* Left arrow - FIX: Use a negative value to push it outside the Swiper's content area. */
+.flower-swiper-gallery .swiper-button-prev {
+  left: 10px; 
+  /* Removing the non-responsive margin-left: -400px */
+}
+
+/* Right arrow - FIX: Use a negative value to push it outside the Swiper's content area. */
+.flower-swiper-gallery .swiper-button-next {
+  right: 10px;
+  /* Removing the non-responsive margin-right: -400px */
+}
+
+/* Hover glow (Applying scale to both buttons for consistency) */
+.flower-swiper-gallery .swiper-button-next:hover,
+.flower-swiper-gallery .swiper-button-prev:hover {
+  background: rgba(139, 92, 246, 0.45);
+  box-shadow: 0 0 25px rgba(139, 92, 246, 0.7);
+  transform: scale(1.1);
+}
+
+/* Arrow icon - FIX: Preventing Swiper's internal rotation and ensuring content is correct */
+.flower-swiper-gallery .swiper-button-next::after,
+.flower-swiper-gallery .swiper-button-prev::after {
+  font-size: 20px;
+  font-weight: bold;
+  /* CRITICAL FIX: Stops any transform/rotation applied to the icon */
+  transform: none !important; 
+}
+
+
+
+/* ============================= */
+/* Mobile Optimization */
+/* ============================= */
+
+@media (max-width: 640px) {
+  .flower-swiper-gallery .swiper-button-next,
+  .flower-swiper-gallery .swiper-button-prev {
+    display: none;
+  }
+}

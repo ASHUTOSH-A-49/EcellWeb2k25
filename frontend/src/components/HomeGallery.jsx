@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
-
+import { useNavigate } from 'react-router-dom';
 export default function HomeGallery() {
+  const navigate = useNavigate();
   const [visible, setVisible] = useState(false);
   const sectionRef = useRef(null);
 
@@ -32,6 +33,13 @@ export default function HomeGallery() {
     const card = document.getElementById(`gallery-card-${index}`);
     if (!card) return;
     card.style.transform = "translateY(0px) rotateY(0deg) rotateX(0deg)";
+  };
+   
+  const handleViewMoreClick = () => {
+    // Navigate to the '/gallery' path (assuming your Gallery component is routed here)
+    // The { state: { smoothScroll: true } } is a common pattern to signal the
+    // destination component or a higher-order component to scroll to the top.
+    navigate('/Gallery', { state: { smoothScroll: true } }); 
   };
 
   const images = [
@@ -144,7 +152,7 @@ export default function HomeGallery() {
 
         {/* View More Button */}
         <div className="text-center mt-12">
-          <button
+          <button onClick={handleViewMoreClick}
             className="
               px-8 py-3 rounded-xl font-semibold border border-ecell-mine text-ecell-mine
               hover:bg-ecell-mine hover:text-white transition-all duration-300
