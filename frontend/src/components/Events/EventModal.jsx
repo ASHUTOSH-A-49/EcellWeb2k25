@@ -49,18 +49,19 @@ const EventModal = ({ event, onClose }) => {
 
                 <button 
                     onClick={onClose} 
-                    className="absolute top-4 right-4 p-2 bg-black/40 hover:bg-black/60 rounded-full transition z-20 backdrop-blur-md"
+                    className="absolute top-4 right-4 p-2 bg-black/40 hover:bg-black/60 rounded-full transition z-30 backdrop-blur-md"
                     aria-label="Close Modal"
                 >
                     <X className="w-5 h-5 text-white" />
                 </button>
 
-                {/* FIXED SIZING: Aspect ratio container for Modal Image */}
-                <div className="w-full aspect-video lg:aspect-[21/9] overflow-hidden rounded-t-xl relative z-10">
+                {/* IMAGE CONTAINER: Set to contain the image fully */}
+                <div className="w-full bg-black/20 aspect-video lg:aspect-[21/9] overflow-hidden rounded-t-xl relative z-10 flex items-center justify-center">
                     <img 
                         src={event.imageUrl} 
                         alt={event.title} 
-                        className="w-full h-full object-cover"
+                        // Using 'object-contain' to ensure the 100% of the image is visible
+                        className="max-w-full max-h-full object-contain" 
                         onError={(e) => { e.target.onerror = null; e.target.src = "https://placehold.co/800x400/1e1e1e/ffffff?text=Event+Details"; }}
                     />
                 </div>
@@ -70,8 +71,14 @@ const EventModal = ({ event, onClose }) => {
                         <h2 className="text-3xl font-extrabold text-ecell-primary mb-3 leading-tight">{event.title}</h2>
                         
                         <div className="flex flex-col md:flex-row md:items-center justify-between text-gray-400 mb-6 border-b border-white/10 pb-4">
-                            <p className="flex items-center gap-2 font-medium"><Calendar className="w-5 h-5 text-ecell-primary" />{event.date}</p>
-                            <p className="flex items-center gap-2 font-medium mt-2 md:mt-0"><MapPin className="w-5 h-5 text-ecell-primary" />{event.location}</p>
+                            <p className="flex items-center gap-2 font-medium">
+                                <Calendar className="w-5 h-5 text-ecell-primary" />
+                                {event.date}
+                            </p>
+                            <p className="flex items-center gap-2 font-medium mt-2 md:mt-0">
+                                <MapPin className="w-5 h-5 text-ecell-primary" />
+                                {event.location}
+                            </p>
                         </div>
                         
                         <p className="text-gray-300 leading-relaxed whitespace-pre-wrap">{event.details}</p>
