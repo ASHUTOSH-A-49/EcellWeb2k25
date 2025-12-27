@@ -74,7 +74,7 @@ export default function Navbar() {
     { name: "About", href: "/about" },
     { name: "Events", href: "/events" },
     { name: "Team", href: "/team" },
-    { name: "Contact", href: "/contact" },
+    { name: "gallery", href: "/gallery" },
   ];
 
   return (
@@ -90,11 +90,13 @@ export default function Navbar() {
           <div className="
             h-10 w-10 rounded-xl 
             flex items-center justify-center
-            bg-linear-to-br from-ecell-primary via-ecell-secondary to-ecell-accent
+            
             shadow-[0_0_20px_rgba(99,102,241,0.5)]
           ">
             {/* <Rocket className="h-5 w-5 text-white" /> */}
-            <Logo className="h-5 w-5 " />
+            <div className="p-[3px] ">
+  <Logo className="h-5 w-5 " />
+</div>
           </div>
 
           <div>

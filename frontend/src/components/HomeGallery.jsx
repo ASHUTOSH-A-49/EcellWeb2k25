@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function HomeGallery() {
   const [visible, setVisible] = useState(false);
@@ -35,10 +36,10 @@ export default function HomeGallery() {
   };
 
   const images = [
-    "https://picsum.photos/600/400?random=201",
-    "https://picsum.photos/600/400?random=202",
-    "https://picsum.photos/600/400?random=203",
-    "https://picsum.photos/600/400?random=204",
+    "https://res.cloudinary.com/daoth3ia9/image/upload/v1766853086/freecompress-Copy_of_IMG_0425_lj3n1b.jpg",
+    "https://res.cloudinary.com/daoth3ia9/image/upload/v1766853085/freecompress-Copy_of__SAV5476_pr6jbk.jpg",
+    "https://res.cloudinary.com/daoth3ia9/image/upload/v1766853083/freecompress-Copy_of_IMG_5683-6_y6spyx.jpg",
+    "https://res.cloudinary.com/daoth3ia9/image/upload/v1766853080/freecompress-Copy_of_TGR02030_m2no1y.jpg",
   ];
 
   return (
@@ -154,7 +155,7 @@ export default function HomeGallery() {
               hover:bg-ecell-mine hover:text-white transition-all duration-300
             "
           >
-            View More
+            <Link to="/gallery">View More</Link>
           </button>
         </div>
       </div>

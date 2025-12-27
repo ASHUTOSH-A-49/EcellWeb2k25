@@ -272,6 +272,7 @@ import HomeEvent from "../HomeEvent";
 import { ArrowRight, Sparkles } from "lucide-react";
 import HomeAbout from "./HomeAbout";
 import HomeGallery from "./HomeGallery";
+import { Link } from "react-router-dom";
 import ScrollSection from "./ScrollSection";
 import PastSpeakers from "./PastSpeaker";
 // import AboutSliding from "./AboutSliding";
@@ -368,7 +369,7 @@ export default function Hero() {
               flex items-center gap-2
             "
           >
-            Get Started <ArrowRight size={18} />
+            <Link to="/about">Get Started</Link> <ArrowRight size={18} />
           </button>
 
           <button
@@ -377,7 +378,8 @@ export default function Hero() {
               text-gray-200 hover:bg-white/10 transition
             "
           >
-            Explore Events
+            <Link to="/event">Explore Events</Link>
+            
           </button>
         </motion.div>
       </motion.div>

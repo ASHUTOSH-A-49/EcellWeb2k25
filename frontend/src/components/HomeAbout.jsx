@@ -179,6 +179,7 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Target, Eye, Award, TrendingUp ,ArrowUpRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const features = [
   {
@@ -379,7 +380,7 @@ export default function HomeAbout() {
               ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-4"}
             `}
           >
-            View All Events <ArrowUpRight className="w-4 h-4" />
+           <Link to="/about">Know More</Link>  <ArrowUpRight className="w-4 h-4" />
           </button>
         
       </motion.div>

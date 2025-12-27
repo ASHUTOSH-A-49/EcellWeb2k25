@@ -10,8 +10,12 @@ const teamData = {
         { name: "Dr. D. E. F. Singh", title: "Faculty Coordinator", img: "https://i.pravatar.cc/150?img=69", socials: { linkedin: "#", mail: "#" } },
     ],
     overallCoordinators: [
-        { name: "Rishabh Sahu", title: "Overall Coordinator", img: "https://i.pravatar.cc/150?img=1", socials: { linkedin: "#", instagram: "#" } },
-        { name: "Priya Sharma", title: "Overall Coordinator", img: "https://i.pravatar.cc/150?img=2", socials: { linkedin: "#", instagram: "#" } },
+        { name: "Abhishek Kumar Jha", title: "Overall Coordinator", img: "https://res.cloudinary.com/daoth3ia9/image/upload/v1766850563/Abhishek_Jha_oc_sppo3y.png", socials: { linkedin: "#", instagram: "#" } },
+        { name: "Abhishek Yadav", title: "Overall Coordinator", img: "https://res.cloudinary.com/daoth3ia9/image/upload/v1766850012/Abhishek_Yadav_PR_Domain_dypfsh.jpg", socials: { linkedin: "#", instagram: "#" } },
+        { name: "Anshika Bhardwaj", title: "Overall Coordinator", img: "https://res.cloudinary.com/daoth3ia9/image/upload/v1766850016/Anshika_Bhardwaj_OC_kikhzl.jpg", socials: { linkedin: "#", instagram: "#" } },
+        { name: "Ayush Bhardwaj", title: "Overall Coordinator", img: "https://res.cloudinary.com/daoth3ia9/image/upload/v1766850022/Ayush_Bhardwaj__OC_etgluy.jpg", socials: { linkedin: "#", instagram: "#" } },
+        { name: "Ritik Pathak", title: "Overall Coordinator", img: "https://res.cloudinary.com/daoth3ia9/image/upload/v1766850045/Ritik_Pathak_OC_gkzjms.jpg", socials: { linkedin: "#", instagram: "#" } },
+        { name: "Shashank Sharma", title: "Overall Coordinator", img: "https://res.cloudinary.com/daoth3ia9/image/upload/v1766850061/Shashank_Sharma__OC_nob4lj.jpg", socials: { linkedin: "#", instagram: "#" } },
     ],
     headCoordinators: [
         { name: "Amit Kumar", domain: "Tech Head", img: "https://i.pravatar.cc/150?img=3", socials: { linkedin: "#", instagram: "#" } },
