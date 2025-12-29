@@ -1,11 +1,13 @@
-import React from 'react'
+import React from 'react';
+import About_E_CELL from './ui/about_E_CELL';
+import '../components/ui/about_E_CELL.css';
 
 const About = () => {
   return (
     <div>
-      this is the about page
+      <About_E_CELL />
     </div>
-  )
-}
+  );
+};
 
-export default About
+export default About;
