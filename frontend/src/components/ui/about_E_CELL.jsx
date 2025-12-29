@@ -1,10 +1,116 @@
 import './about_E_CELL.css';
+import ecellLogo from './assets/ecell-logo.png';
 
 const About_E_CELL = () => {
   return (
-    <section id="about" className="about-ecell-section">
-      {/* Tech Background Effects */}
-      <div className="tech-background">
+    <>
+      {/* HERO SECTION - Top Most Part */}
+      <section className="hero-section">
+        {/* Enhanced Tech Background */}
+        <div className="hero-background">
+          {/* Animated Grid */}
+          <div className="hero-grid"></div>
+          
+          {/* Gradient Orbs */}
+          <div className="hero-orb hero-orb-1"></div>
+          <div className="hero-orb hero-orb-2"></div>
+          
+          {/* Tech Rings */}
+          <div className="tech-ring ring-1"></div>
+          <div className="tech-ring ring-2"></div>
+          
+          {/* Floating Tech Elements */}
+          <div className="hero-float-element square"></div>
+          <div className="hero-float-element circle"></div>
+          <div className="hero-float-element rect"></div>
+          
+          {/* Circuit Patterns */}
+          <svg className="hero-circuit-svg" viewBox="0 0 1200 800">
+            <path d="M50,50 L150,50 L150,150 L250,150 L250,250" stroke="url(#hero-circuit)" strokeWidth="3" fill="none" className="hero-circuit-path" />
+            <path d="M1150,750 L1050,750 L1050,650 L950,650 L950,550" stroke="url(#hero-circuit)" strokeWidth="3" fill="none" className="hero-circuit-path path-delay" />
+            <circle cx="150" cy="150" r="8" fill="hsl(187, 100%, 55%)" className="circuit-dot" />
+            <circle cx="1050" cy="650" r="8" fill="hsl(200, 100%, 60%)" className="circuit-dot dot-delay" />
+            <defs>
+              <linearGradient id="hero-circuit" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="hsl(187, 100%, 55%)" />
+                <stop offset="50%" stopColor="hsl(200, 100%, 60%)" />
+                <stop offset="100%" stopColor="hsl(187, 100%, 55%)" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+
+        <div className="hero-container">
+          <div className="hero-content-wrapper">
+            {/* Logo Section with ABOUT E-CELL Header */}
+            <div className="hero-logo-section">
+              {/* ABOUT E-CELL Badge */}
+              <div className="about-badge">
+                <div className="badge-dot"></div>
+                <span className="badge-title">ABOUT E-CELL</span>
+                <div className="badge-dot badge-dot-delay"></div>
+              </div>
+              
+              {/* Logo */}
+              <div className="logo-wrapper">
+                <div className="logo-glow"></div>
+                <img
+                  src={ecellLogo}
+                  alt="E-Cell NIT Raipur Logo"
+                  className="ecell-logo"
+                />
+              </div>
+            </div>
+
+            {/* Content */}
+            <div className="hero-text-content">
+              <div className="cdc-badge">
+                <span className="cdc-dot"></span>
+                Part of Career Development Cell
+              </div>
+
+              <h1 className="hero-main-heading">
+                <span className="heading-line">THE</span>
+                <span className="heading-line gradient-heading">ENTREPRENEURSHIP</span>
+                <span className="heading-line">CELL</span>
+                <span className="heading-line hero-subheading">NIT RAIPUR</span>
+              </h1>
+
+              <p className="hero-tagline">
+                <span className="tagline-bold">FOSTERING INNOVATION</span> • <span className="tagline-bold">NURTURING ENTREPRENEURS</span> • <span className="tagline-bold">BUILDING LEADERS</span>
+              </p>
+              
+              <p className="hero-description">
+                Empowering the next generation of business leaders at the National Institute of Technology, Raipur.
+              </p>
+
+              <div className="hero-buttons">
+                <a href="#about" className="hero-btn hero-btn-primary">
+                  <span>Learn More</span>
+                  <svg className="btn-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </a>
+                <a href="#events" className="hero-btn hero-btn-secondary">
+                  <span>Our Events</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Scroll indicator */}
+        <div className="scroll-indicator">
+          <div className="scroll-box">
+            <div className="scroll-dot"></div>
+          </div>
+        </div>
+      </section>
+
+      {/* ABOUT SECTION - Rest of the content */}
+      <section id="about" className="about-ecell-section">
+        {/* Tech Background Effects */}
+        <div className="tech-background">
         {/* Animated Grid Pattern */}
         <div className="grid-pattern"></div>
         
@@ -587,6 +693,7 @@ const About_E_CELL = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 
