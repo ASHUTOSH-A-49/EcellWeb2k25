@@ -182,6 +182,7 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Calendar, MapPin, ArrowUpRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const events = [
   {
@@ -298,7 +299,7 @@ export default function HomeEvent() {
               ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-4"}
             `}
           >
-            View All Events <ArrowUpRight className="w-4 h-4" />
+            <Link to="/event">View All Events</Link> <ArrowUpRight className="w-4 h-4" />
           </button>
         </div>
 

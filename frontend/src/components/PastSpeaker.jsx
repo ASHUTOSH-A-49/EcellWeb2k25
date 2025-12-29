@@ -18,22 +18,22 @@ export default function PastSpeakers() {
 
   const speakers = [
     {
-      name: "Amit Jain",
-      role: "Co-Founder, CarDekho",
-      image: "https://images.unsplash.com/photo-1527980965255-d3b416303d12",
-      quote: "Build first, perfect later. Momentum beats perfection.",
+      name: "Dr. Gajendra Purohit",
+      role: "Founder @MathsCare,Mathematics Educator",
+      image: "https://res.cloudinary.com/daoth3ia9/image/upload/v1766851697/gp_c3opaq.jpg",
+      // quote: "Build first, perfect later. Momentum beats perfection.",
     },
     {
-      name: "Kunal Shah",
-      role: "Founder, CRED",
-      image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d",
-      quote: "Trust is the real currency of the internet economy.",
+      name: "Anubhav Dubey",
+      role: "Co-Founder @Chai Sutta Bar",
+      image: "https://res.cloudinary.com/daoth3ia9/image/upload/v1766851697/anubhavdubey_gnevsx.jpg",
+      // quote: "Trust is the real currency of the internet economy.",
     },
     {
-      name: "Ankur Warikoo",
-      role: "Entrepreneur & Author",
-      image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2",
-      quote: "Consistency compounds more than talent.",
+      name: "Sandeep Jain",
+      role: "Founder of Coding Platform:GeeksforGeeks",
+      image: "https://res.cloudinary.com/daoth3ia9/image/upload/v1766851696/sandeepjain_h6oftr.jpg",
+      // quote: "Consistency compounds more than talent.",
     },
   ];
 

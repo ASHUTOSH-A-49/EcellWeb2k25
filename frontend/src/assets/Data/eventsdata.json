@@ -1,0 +1,165 @@
+[
+  {
+    "id": 1,
+    "type": "upcoming",
+    "title": "STARTUP EXPO : FROM VISION TO VENTURE",
+    "shortDescription": "The Startup Expo beckons young innovators to unveil their visions before a panel of seasoned experts and investors. It's your gateway to funding, recognition, and turning ideas into prosperous realities.",
+    "date": "TBD",
+    "location": "DDU Auditorium",
+    "imageUrl": "https://res.cloudinary.com/daoth3ia9/image/upload/v1766857511/startup_ex_fpi7nv.png",
+    "details": "The Startup Expo is a premier platform designed to bridge the gap between visionary student startups and the professional investment ecosystem[cite: 86, 173]. Participants get the unique opportunity to exhibit their products, network with industry leaders, and pitch directly to angel investors and venture capitalists for potential seed funding[cite: 173, 176]. It is a celebration of innovation where ideas are transformed into scalable business models[cite: 87, 174]."
+  },
+  {
+    "id": 2,
+    "type": "upcoming",
+    "title": "ENTROPY : GIVE WINGS TO IDEAS",
+    "shortDescription": "Entropy, a distinguished event tailored for aspiring entrepreneurs and students serves as a platform to glean wisdom from industry experts, motivational luminaries and accomplished entrepreneurs.",
+    "date": "TBD",
+    "location": "DDU Auditorium",
+    "imageUrl": "https://res.cloudinary.com/daoth3ia9/image/upload/v1766857511/entropy_jgbjnr.png",
+    "details": "Entropy serves as a massive knowledge-sharing symposium featuring keynote sessions from some of India’s most successful entrepreneurs and motivational speakers[cite: 91]. The event is designed to inspire the next generation of leaders by providing deep insights into the challenges and triumphs of the entrepreneurial journey, offering students a chance to learn directly from the experts who have pioneered change in their respective fields[cite: 91]."
+  },
+  {
+    "id": 3,
+    "type": "upcoming",
+    "title": "UTHKRISHTI : SILENT HEROES OF TODAY",
+    "shortDescription": "A transformative event that embodies the spirit of optimism and the pursuit of innovative rural and social startups with a profound commitment to driving positive change in society.",
+    "date": "TBD",
+    "location": "DDU Auditorium",
+    "imageUrl": "https://res.cloudinary.com/daoth3ia9/image/upload/v1766857511/UTHKRISHTI_pdacpu.png",
+    "details": "Uthkrishti is a unique flagship event dedicated to social and rural entrepreneurship[cite: 95]. It focuses on identifying and supporting silent heroes—innovators who are developing sustainable solutions for grassroots problems[cite: 95]. The event provides a stage for startups that prioritize social impact over pure profit, helping them find the mentorship and resources needed to drive positive change in society[cite: 95]."
+  },
+  {
+    "id": 4,
+    "type": "upcoming",
+    "title": "IGNITION : SPARKS OF ENTREPRENEURIAL",
+    "shortDescription": "A Business Model competition poised to bridge the gap between innovative entrepreneurs and visionary investors, aiming to foster growth and innovation for emerging businesses in India.",
+    "date": "TBD",
+    "location": "DDU Auditorium",
+    "imageUrl": "https://res.cloudinary.com/daoth3ia9/image/upload/v1766857510/IGNITION_drvg1n.png",
+    "details": "Ignition is a high-stakes Business Model competition poised to bridge the gap between innovative entrepreneurs and visionary investors[cite: 102]. Participants are required to present comprehensive business plans aimed at fostering growth and innovation for emerging businesses in India[cite: 103]. Judged by a panel of seasoned experts, this event acts as a catalyst for emerging businesses, providing them with the professional feedback and exposure required to thrive."
+  },
+  {
+    "id": 5,
+    "type": "upcoming",
+    "title": "BUSINESS CASE STUDY : RESURRECT AND CORRECT",
+    "shortDescription": "A battle of brains where students showcase their business acumen by addressing real-world problem statements with meticulously evaluated approaches.",
+    "date": "TBD",
+    "location": "DDU Auditorium",
+    "imageUrl": "https://res.cloudinary.com/daoth3ia9/image/upload/v1766857511/B_case_study_bug8td.png",
+    "details": "The Business Case Study event is a battle of brains where students showcase their business acumen[cite: 108]. Participants are presented with a real-world problem statement, and their approach to addressing the challenge is meticulously evaluated[cite: 109]. It is an intense test of analytical thinking, quick decision-making, and financial literacy."
+  },
+  {
+    "id": 6,
+    "type": "upcoming",
+    "title": "E MUN : IDEAS AND DIPLOMACY",
+    "shortDescription": "A groundbreaking event set to redefine diplomacy and innovation, blending an exceptional UN simulation with the spirit of entrepreneurship.",
+    "date": "TBD",
+    "location": "DDU Auditorium",
+    "imageUrl": "https://res.cloudinary.com/daoth3ia9/image/upload/v1766857506/EMUN_d9soyj.png",
+    "details": "The Entre Model United Nations (E-MUN) is a groundbreaking event set to redefine diplomacy and innovation[cite: 113]. Participants step into the shoes of global leaders and represent nations in an exceptional UN simulation that blends diplomacy with entrepreneurship[cite: 114]. It challenges participants to think about how global policy and entrepreneurship can solve the world's most pressing issues."
+  },
+  {
+    "id": 7,
+    "type": "upcoming",
+    "title": "E-GATHERING : FUN EVENT",
+    "shortDescription": "A captivating cultural night featuring emerging stand-up comedians, top-notch musicians, and talented performers to create an atmosphere of delight.",
+    "date": "TBD",
+    "location": "DDU Auditorium",
+    "imageUrl": "https://res.cloudinary.com/daoth3ia9/image/upload/v1766857508/Egathering_st0pcv.png",
+    "details": "E-Gathering is a captivating cultural night that ushers in an atmosphere of delight for students[cite: 121]. The event features emerging stand-up comedians, top-notch musicians, and talented performers[cite: 122, 123]. It serves as an event focused on rejoicing the E-Summit and bringing a dose of mental peace and dopamine[cite: 134]."
+  },
+  {
+    "id": 8,
+    "type": "upcoming",
+    "title": "B-QUIZ : CHANNELIZE YOUR GREY MATTER",
+    "shortDescription": "A brain-teasing quizzing event where teams engage in a battle of wits to test their business knowledge, risk-taking mindset, and analytical skills.",
+    "date": "TBD",
+    "location": "DDU Auditorium",
+    "imageUrl": "https://res.cloudinary.com/daoth3ia9/image/upload/v1766857508/B-quiz_ahkjyz.png",
+    "details": "B-Quiz is a brain-teasing quizzing event where teams engage in a battle of wits[cite: 126]. It tests participants' business knowledge, risk-taking mindset, and analytical skills[cite: 126]. Teams compete through multiple rounds of high-intensity questioning, making it one of the most intellectually stimulating events of the summit."
+  },
+  {
+    "id": 9,
+    "type": "upcoming",
+    "title": "CRICNOMETRICA : THE ULTIMATE CRICKET BATTLEGROUND",
+    "shortDescription": "An exhilarating cricket-themed auction event that offers participants a unique blend of cricket expertise and practical insight into the art of bidding.",
+    "date": "TBD",
+    "location": "DDU Auditorium",
+    "imageUrl": "https://res.cloudinary.com/daoth3ia9/image/upload/v1766857507/CRICNOMET_lq0g2t.png",
+    "details": "Cricnometrica is an exhilarating cricket-themed auction event that offers participants a unique blend of cricket expertise and practical insight into the art of bidding[cite: 130]. Participants can immerse themselves in the dynamics of a cricket auction, using strategy and analysis to build their ultimate team[cite: 130]. It is the ultimate cricket battleground for budding managers and enthusiasts."
+  },
+  {
+    "id": 10,
+    "type": "past",
+    "title": "BIZFEST 2.0: Innovate. Compete. Conquer.🔥",
+    "shortDescription": "Dive into an insightful session with Mr. Naman Alok Vidyabhanu (Founder, Catalysing Dreams & Beyond | Dream Placement Mentor). Gain exclusive insights on navigating the corporate and startup world!",
+    "date": "26th November 2025, 11:00 AM Onwards",
+    "location": "Hira Hall, NIT Raipur",
+    "imageUrl": "https://res.cloudinary.com/daoth3ia9/image/upload/v1766859283/Screenshot_2025-12-27_234101_emu7cj.png",
+    "details": "Dive into an insightful session with Mr. Naman Alok Vidyabhanu (Founder, Catalysing Dreams & Beyond | Dream Placement Mentor). Gain exclusive insights on navigating the corporate and startup world! And that’s not all! Put your skills to the test in our high-octane competitions: Startup Premier League – Build your dream team and bid for glory! DeBattle – Argue, defend, and win the war of words."
+  },
+  {
+    "id": 11,
+    "type": "past",
+    "title": "Speaker Session :Bitcoin Bharat is here!",
+    "shortDescription": "Join E-Cell NIT Raipur for an expert session with Shreyan Joshi (Cofounder, Bitcoin Policy Institute India).",
+    "date": "4th November 12:00 PM",
+    "location": "Hira Hall",
+    "imageUrl": "https://res.cloudinary.com/daoth3ia9/image/upload/v1766859284/Screenshot_2025-12-27_234341_wxynym.png",
+    "details": "Why attend?: Chance to win from a ₹1 LAKH prize pool! ,Free Bitcoin Sats (for 10 lucky attendees),Participation Certificate"
+  },
+  {
+    "id": 12,
+    "type": "past",
+    "title": "Skill Sprint",
+    "shortDescription": "Unleash Your Potential with SKILL SPRINT | Unstop! Get ready to ignite your curiosity, test your limits, and challenge your learning potential in The Self-Learning Showdown!",
+    "date": "26th October 2025 ",
+    "location": "Hira Hall",
+    "imageUrl": "https://res.cloudinary.com/daoth3ia9/image/upload/v1766859283/Screenshot_2025-12-27_234149_dzdvzj.png",
+    "details": "From tackling online assessments to crafting insightful presentations — every step is designed to boost your confidence and sharpen your problem-solving skills. 🎁 Exciting prizes await the best minds who rise above and showcase their talent!"
+  },
+  {
+    "id": 13,
+    "type": "past",
+    "title": "Speaker Session:Workshop on  Blueprints to Build",
+    "shortDescription": "Join us for “Blueprints to Build” with Mr. Mohit Sahu, Co-founder of Minocular and proud NIT Raipur alumnus (Batch of 2015). ",
+    "date": "17th Oct, Friday  2:30 PM ",
+    "location": "Architecture Auditorium",
+    "imageUrl": "https://res.cloudinary.com/daoth3ia9/image/upload/v1766859285/Screenshot_2025-12-27_234313_eds6cs.png",
+    "details": "💡 Learn how to take your *prototype* to the market and transform your idea into a successful *business* straight from an entrepreneur who’s done it himself! Don’t miss this golden opportunity to turn your innovation into impact! 🔥"
+  },
+  {
+    "id": 14,
+    "type": "past",
+    "title": "Pitch Clash 1.0: ✨ Turn your idea into impact!",
+    "shortDescription": " Get ready innovators! E-Cell NIT Raipur presents Pitch Clash 1.0 - the ultimate stage where ideas collide & startups thrive. 💡✨| 🔥 3 Thrilling Rounds|📊 PPT Submission| 🎤 Offline Pitch",
+    "date": "last date to register: September 30, 2025  ",
+    "location": "PPT HALL",
+    "imageUrl": "https://res.cloudinary.com/daoth3ia9/image/upload/v1766859283/Screenshot_2025-12-27_234211_n572qn.png",
+    "details": "E-Cell NIT Raipur presents Pitch Clash 1.0 , This event is proudly co-powered and sponsored by @unstop.world , our official event partner. E-Cell NIT Raipur presents Pitch Clash 1.0 – a platform where ideas collide and startups rise. Showcase your creativity and entrepreneurial spirit across three stages: Abstract Submission, PPT Submission, and Offline Pitch.  🏆 Prizes Worth ₹20,000"
+  },
+  {
+    "id": 14,
+    "type": "past",
+    "title": "WORKSHOP:Enterpreneurial Journey and Business Pitching Techniques",
+    "shortDescription": "Think. Create. Pitch. Inspire. 🔥| Get ready to spark your entrepreneurial journey! ",
+    "date": " 27th September 2025, 2:30 PM onwards",
+    "location": " Hira-Hall",
+    "imageUrl": "https://res.cloudinary.com/daoth3ia9/image/upload/v1766860916/Screenshot_2025-12-28_001137_gvq4z9.png",
+    "details": "E-Cell NIT Raipur presents : Entrepreneurial Journey & Business Pitching Techniques 🚀.Dive into an electrifying session with Mr. Dhruv Goel, CEO of BigMint , as he reveals real startup stories, insider insights, and winning strategies to pitch like a pro. 💡 And that’s not all! Along with the session, get a chance to participate in a fun two-round competition: Riddle Solving – test your wit & quick thinking | Brand Fusion Challenge – merge popular brands into creative business ideas. 💥 Get a chance to participate, show off your skills, and grab awesome prizes!"
+  },
+  {
+    "id": 14,
+    "type": "past",
+    "title": "Speaker session ft. Dr. Domendra Singh Ganjir, Co-Founder of Businessgarh",
+    "shortDescription": "✨ Dreams that Dare. Ideas that Lead. Futures that Inspire.✨ ",
+    "date": " 21st August 2025 , 2:00 PM",
+    "location": " Archi Auditorium, NIT Raipur",
+    "imageUrl": "https://res.cloudinary.com/daoth3ia9/image/upload/v1766861369/Screenshot_2025-12-28_001910_lghbyn.png",
+    "details": "🚀 This 21st August 2025, E-Cell NIT Raipur proudly celebrates Entrepreneurship Day with a special session! 🎤 Featuring Dr. Domendra Singh Ganjir, Co-Founder of Businessgarh — a dynamic entrepreneur and ecosystem builder who continues to inspire and guide countless innovators. 🌟  🔥 An evening of ideas, inspiration & innovation awaits!🔥 Be there where creativity meets courage and visions turn into reality. 🎉"
+  }
+
+
+
+]

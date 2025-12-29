@@ -1,95 +1,30 @@
-import React from 'react'
-import Navbar from '../Navbar'
-import About from '../About' 
+import React, { useState } from 'react';
 import EventSection from './EventSection';
-import { useState } from 'react';
 import EventModal from './EventModal'; 
-// 🛠️ MODIFICATION 1: Import AnimatePresence
 import { AnimatePresence } from 'framer-motion';
 
-const mockEvents = [
-    {
-        id: 1,
-        type: 'upcoming',
-        title: 'E-Summit 2025: The Innovation Leap',
-        shortDescription: 'Our flagship event featuring global speakers, pitch competitions, and startup expos.',
-        date: 'March 15-17, 2025',
-        location: 'NITRR Campus Auditorium',
-        imageUrl: 'https://placehold.co/600x400/1e3a8a/ffffff?text=E-SUMMIT',
-        details: 'The annual E-Summit brings together entrepreneurs, venture capitalists, and students for three days of intense learning, networking, and innovation. Highlights include a national-level Hackathon and keynotes from industry leaders.'
-    },
-    {
-        id: 2,
-        type: 'upcoming',
-        title: 'Pitch Perfect 2.0',
-        shortDescription: 'Present your groundbreaking idea to a panel of top-tier investors and secure funding.',
-        date: 'February 28, 2025',
-        location: 'Online / Incubation Center',
-        imageUrl: 'https://placehold.co/600x400/3b82f6/ffffff?text=PITCH+PERFECT',
-        details: 'A high-stakes competition where young entrepreneurs have 5 minutes to pitch their startup idea. Cash prizes, mentorship, and direct funding opportunities are on the line.'
-    },
-    {
-        id: 3,
-        type: 'upcoming',
-        title: 'Web 3.0 Workshop Series',
-        shortDescription: 'A hands-on technical workshop focused on blockchain, NFTs, and decentralized finance (DeFi).',
-        date: 'January 10, 2025',
-        location: 'Computer Center, Lab 3',
-        imageUrl: 'https://placehold.co/600x400/10b981/ffffff?text=WEB3+WORKSHOP',
-        details: 'Learn the fundamentals of building decentralized applications (dApps) on Ethereum. No prior blockchain experience required, but knowledge of JavaScript is recommended.'
-    },
-    {
-        id: 4,
-        type: 'past',
-        title: 'HackBattle 2024',
-        shortDescription: '24-hour hackathon that tackled sustainability challenges using AI and ML.',
-        date: 'October 2024',
-        location: 'NITRR Main Hall',
-        imageUrl: 'https://placehold.co/600x400/ef4444/ffffff?text=HACKBATTLE',
-        details: 'A successful 24-hour coding challenge that resulted in three patent-pending solutions for water conservation and renewable energy optimization.'
-    },
-    {
-        id: 5,
-        type: 'past',
-        title: 'Startup Expo 2024',
-        shortDescription: 'Showcasing 50+ student-led startups and securing 10 seed funding rounds.',
-        date: 'August 2024',
-        location: 'Open Ground',
-        imageUrl: 'https://placehold.co/600x400/f59e0b/ffffff?text=EXPO+2024',
-        details: 'The annual Startup Expo attracted over 5,000 visitors, leading to significant mentorship pairings and media coverage for the participating student ventures.'
-    },
-    {
-        id: 6,
-        type: 'past',
-        title: 'Alumni Fireside Chat',
-        shortDescription: 'A discussion with NITRR alumni who successfully launched their tech ventures in Silicon Valley.',
-        date: 'May 2024',
-        location: 'Online (Zoom)',
-        imageUrl: 'https://placehold.co/600x400/6366f1/ffffff?text=ALUMNI+CHAT',
-        details: 'Our most-attended virtual event, providing deep insights into fundraising, scaling operations, and navigating the complexities of international market expansion.'
-    },
-];
+// 🚀 IMPORT DATA FROM JSON
+import eventData from '../../assets/Data/eventsdata.json'; 
 
 const Events = () => {
-    const upcomingEvents = mockEvents.filter(e => e.type === 'upcoming');
-    const pastEvents = mockEvents.filter(e => e.type === 'past');
+    // Filter events from the imported JSON
+    const upcomingEvents = eventData.filter(e => e.type === 'upcoming');
+    const pastEvents = eventData.filter(e => e.type === 'past');
+    
     const [selectedEvent, setSelectedEvent] = useState(null);
     const openModal = (event) => setSelectedEvent(event);
     const closeModal = () => setSelectedEvent(null);
 
     return (
         <div className="min-h-screen bg-ecell-bg relative overflow-hidden">
-            
-            {/* 💡 MODIFICATION: Glowing Background Blobs (Copied from Hero) */}
+            {/* Background Blobs */}
             <div className="pointer-events-none absolute inset-0 -z-10">
                 <div className="absolute -top-40 left-10 h-80 w-80 bg-ecell-primary/40 rounded-full blur-3xl" />
                 <div className="absolute top-40 right-0 h-96 w-96 bg-ecell-secondary/30 rounded-full blur-[110px]" />
                 <div className="absolute bottom-16 left-1/2 h-72 w-72 -translate-x-1/2 bg-ecell-accent/20 rounded-full blur-3xl" />
             </div>
 
-            {/* <Navbar /> */}
             <div className="page-content pt-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-
                 <header className="py-10 text-center">
                     <h1 className="text-5xl font-extrabold text-white tracking-tight">
                         EVENTS
@@ -108,12 +43,12 @@ const Events = () => {
                         openModal={openModal} 
                     />
                 </main>
-                
             </div>
             
-            {/* 🛠️ MODIFICATION 2: Wrap EventModal in AnimatePresence to enable entrance/exit animations */}
             <AnimatePresence mode="wait">
-                {selectedEvent && <EventModal event={selectedEvent} onClose={closeModal} />}
+                {selectedEvent && (
+                    <EventModal event={selectedEvent} onClose={closeModal} />
+                )}
             </AnimatePresence>
         </div>
     );

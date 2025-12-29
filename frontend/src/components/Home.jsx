@@ -265,137 +265,140 @@
 // export default Home
 
 
-import { motion, useScroll, useTransform } from "motion/react";
-import { useRef,useState , useEffect } from "react";
+import { motion } from "framer-motion";
+import { useRef, useState, useEffect } from "react";
 import React from "react";
+import { ArrowRight, Sparkles, Instagram, Linkedin, Twitter } from "lucide-react";
+import { Link } from "react-router-dom";
+
+// Standard Components
 import HomeEvent from "../HomeEvent";
-import { ArrowRight, Sparkles } from "lucide-react";
 import HomeAbout from "./HomeAbout";
 import HomeGallery from "./HomeGallery";
-import ScrollSection from "./ScrollSection";
 import PastSpeakers from "./PastSpeaker";
-import Gallery from "./Gallery";
 import HomeSponsors from "./HomeSponsors";
-// import AboutSliding from "./AboutSliding";
 
 export default function Hero() {
   const ref = useRef(null);
-
-  // const { scrollYProgress } = useScroll({
-  //   target: ref,
-  //   offset: ["start start", "end start"],
-  // });
-
   const [offsetY, setoffsetY] = useState(0);
+
   const handleScroll = () => setoffsetY(window.pageYOffset);
+  
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // const opacity = useTransform(scrollYProgress, [0, 1], [1, 0.5]);
-  // const y = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
+  const bgImage = "https://res.cloudinary.com/daoth3ia9/image/upload/v1766953561/Copy_of_IMG_8935_xutg4o.jpg";
 
   return (
-    <div>
-      {/* <ScrollSection className="bg-black text-white"> */}
-
-      
-    <section
-      id="home"
-      ref={ref}
-      className="relative min-h-screen flex items-center justify-center overflow-hidden px-6 pt-28"
-    >
-      {/* 🔵 Glowing Background Blobs */}
-      <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute -top-40 left-10 h-80 w-80 bg-ecell-primary/40 rounded-full blur-3xl" />
-        <div className="absolute top-20 right-0 h-96 w-96 bg-ecell-secondary/30 rounded-full blur-[110px]" />
-        <div className="absolute bottom-[-4rem] left-1/2 h-72 w-72 -translate-x-1/2 bg-ecell-accent/20 rounded-full blur-3xl" />
+    <div className="relative w-full">
+      {/* 📱 1. FIXED SOCIAL BAR (Stays on screen) */}
+      <div className="fixed left-4 md:left-8 top-1/2 -translate-y-1/2 z-[100] hidden sm:flex flex-col gap-6 items-center">
+        <div className="w-[1px] h-16 bg-gradient-to-t from-ecell-primary to-transparent opacity-50" />
+        <SocialIcon href="https://www.instagram.com/ecell_nitraipur_/" icon={<Instagram size={20} />} />
+    <SocialIcon href="https://www.linkedin.com/company/entrepreneurship-cell-nit-raipur/" icon={<Linkedin size={20} />} />
+    <SocialIcon href="https://twitter.com/ecell_nitrr" icon={<Twitter size={20} />} />
+        <div className="w-[1px] h-16 bg-gradient-to-b from-ecell-primary to-transparent opacity-50" />
       </div>
 
-      {/* 📝 Main Content */}
-      <motion.div style={{
-    transform: `translateY(${offsetY * 0.5}px)`,
-    opacity: Math.max(1 - offsetY / 400, 0),
-    transition: "opacity 0.2s ease-out"
-  }} className="max-w-3xl text-center">
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1, duration: 0.6 }}
-          className="uppercase tracking-[0.25em] text-ecell-secondary text-sm mb-4"
-        >
-          <Sparkles className="inline-block h-4 w-4 mr-1" />
-          Empower • Innovate • Build
-        </motion.p>
+      {/* 🏗️ 2. HERO SECTION */}
+      <section
+        id="home"
+        ref={ref}
+        className="relative min-h-screen w-full flex items-center justify-center overflow-hidden px-6 pt-20"
+      >
+        {/* 🖼️ BACKGROUND IMAGE LAYER */}
+        <div 
+          className="absolute inset-0 z-[-30] w-full h-full"
+          style={{ 
+            backgroundImage: `url(${bgImage})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundAttachment: 'fixed', // This creates a high-end parallax feel
+            transform: `scale(${1 + offsetY * 0.0002})`,
+          }} 
+        />
+        
+        {/* 🌑 OVERLAY LAYER (Darkens image so text is visible) */}
+        <div className="absolute inset-0 z-[-20] bg-black/60 bg-gradient-to-b from-black/40 via-transparent to-ecell-bg" />
 
-        {/* 🌈 Gradient Heading */}
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2, duration: 0.6 }}
-          className="
-            text-4xl md:text-6xl font-extrabold 
-            bg-linear-to-r from-ecell-primary via-ecell-secondary to-ecell-accent 
-            bg-clip-text text-transparent leading-tight
-          "
+        {/* 📝 CONTENT LAYER */}
+        <motion.div 
+          style={{
+            y: offsetY * 0.3,
+            opacity: Math.max(1 - offsetY / 600, 0),
+          }} 
+          className="relative z-10 max-w-4xl text-center"
         >
-          Transforming Ideas Into Reality
-        </motion.h1>
-
-        {/* 💬 Subheading */}
-        <motion.p
-          initial={{ opacity: 0, y: 15 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3, duration: 0.6 }}
-          className="text-gray-300 mt-4 max-w-xl mx-auto text-sm md:text-base"
-        >
-          E-Cell NIT Raipur fosters entrepreneurship by helping innovators
-          build, launch, and scale impactful ventures.
-        </motion.p>
-
-        {/* 🚀 Buttons */}
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.45, duration: 0.6 }}
-          className="mt-8 flex justify-center gap-4"
-        >
-          <button
-            className="
-              px-6 py-3 rounded-xl font-medium
-              bg-ecell-primary text-white
-              shadow-ecell-glow 
-              hover:opacity-90 transition
-              flex items-center gap-2
-            "
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="uppercase tracking-[0.3em] text-ecell-secondary text-xs md:text-sm mb-6 font-bold flex items-center justify-center gap-2"
           >
-            Get Started <ArrowRight size={18} />
-          </button>
+            <Sparkles className="h-4 w-4" />
+            Empower • Innovate • Build
+          </motion.p>
 
-          <button
-            className="
-              px-6 py-3 rounded-xl font-medium border border-white/20
-              text-gray-200 hover:bg-white/10 transition
-            "
+          <motion.h1
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8 }}
+            className="text-5xl md:text-8xl font-black text-white leading-[1.1] tracking-tighter"
           >
-            Explore Events
-          </button>
+            Transforming Ideas <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-ecell-primary via-ecell-secondary to-ecell-accent animate-gradient">
+              Into Reality
+            </span>
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.4 }}
+            className="text-gray-200 mt-8 max-w-2xl mx-auto text-lg md:text-xl font-light leading-relaxed"
+          >
+            Fostering the spirit of entrepreneurship at NIT Raipur. We help you turn your vision into a scalable venture.
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6 }}
+            className="mt-12 flex flex-col sm:flex-row justify-center gap-6"
+          >
+            <Link to="/about" className="group px-10 py-4 rounded-full font-bold bg-ecell-primary text-white shadow-[0_0_20px_rgba(var(--color-primary),0.4)] hover:scale-105 transition-all flex items-center justify-center gap-2">
+              Get Started <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+            </Link>
+
+            <Link to="/event" className="px-10 py-4 rounded-full font-bold border border-white/40 text-white backdrop-blur-md hover:bg-white/10 transition-all text-center">
+              Explore Events
+            </Link>
+          </motion.div>
         </motion.div>
-      </motion.div>
-    </section>
-    {/* </ScrollSection> */}
-    {/* ScrollSection className="bg-white text-black"> */}
-    
+      </section>
 
-    <HomeAbout  />
-    {/* </ScrollSection> */}
-    {/* <AboutSliding/> */}
-    <HomeEvent />
-    <PastSpeakers/>
-    <HomeSponsors/>
-    <HomeGallery />
-   
+      {/* 🧩 3. REMAINING SECTIONS */}
+      <div className="relative z-10 bg-ecell-bg">
+        <HomeAbout />
+        <HomeEvent />
+        <PastSpeakers />
+        <HomeSponsors/>
+        <HomeGallery />
+      </div>
     </div>
   );
 }
+
+// 🔵 Social Icon Mini-Component
+const SocialIcon = ({ icon, href }) => (
+  <motion.a
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
+    whileHover={{ scale: 1.3, x: 5 }}
+    className="text-white/50 hover:text-ecell-primary transition-all duration-300 drop-shadow-lg"
+  >
+    {icon}
+  </motion.a>
+);
